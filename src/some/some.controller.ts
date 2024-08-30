@@ -1,3 +1,4 @@
+import { Controller, Get } from '@nestjs/common';
 import { PermissionsDecorator } from '../common/decorators/permissions.decorator';
 import { Permissions } from '../common/enums/permissions.enum';
 
@@ -6,6 +7,6 @@ export class SomeController {
   @Get('secure-endpoint')
   @PermissionsDecorator(Permissions.READ)
   secureEndpoint() {
-    // protected route logic
+    // lógica da rota protegida
   }
 }
